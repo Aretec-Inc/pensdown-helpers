@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
 const exec = require('child_process').exec
 const addModels = require('../models')
-const addDynamicModels = require('../dynamicModels')
+// const addDynamicModels = require('../dynamicModels')
 const config = require('./config').development
 
 const init = (cloudConfig = config, alter = false) => {
@@ -63,7 +63,7 @@ const initPromise = (cloudConfig = config, schema, alter = false) => {
                     console.log('new schema')
                 })
                 .catch((e) => console.log('error'))
-            addDynamicModels(db, schema)
+            // addDynamicModels(db, schema)
         }
         catch (e) {
             reject(null)
