@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             proposal_name: DataTypes.STRING,
+            model_name: DataTypes.STRING,
             api_key: DataTypes.STRING,
             proposal_type: DataTypes.STRING,
             category_type: DataTypes.STRING,

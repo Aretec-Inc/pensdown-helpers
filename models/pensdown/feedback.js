@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
     Feedback.init(
         {
-            proposal_review_id: {
+            feedback_id: {
                 type: DataTypes.STRING,
                 primaryKey: true,
                 allowNull: false
