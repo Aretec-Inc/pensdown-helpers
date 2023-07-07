@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             team_name: DataTypes.STRING,
+            team_description: DataTypes.STRING,
         },
         {
             sequelize,
