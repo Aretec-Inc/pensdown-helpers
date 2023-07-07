@@ -31,6 +31,9 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false
             },
+            submission_date: {
+                type: DataTypes.DATE
+            },
             created_at: {
                 type: DataTypes.DATE
             }
