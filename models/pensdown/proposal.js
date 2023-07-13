@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
             api_key: DataTypes.STRING,
             proposal_type: DataTypes.STRING,
             category_type: DataTypes.ARRAY(DataTypes.STRING),
-            team_id: DataTypes.STRING,
+            team_id: DataTypes.ARRAY(DataTypes.STRING),
             created_by: DataTypes.STRING,
             is_deleted: {
                 type: DataTypes.BOOLEAN,
