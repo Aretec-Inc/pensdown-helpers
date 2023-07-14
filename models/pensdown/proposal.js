@@ -22,6 +22,8 @@ module.exports = (sequelize, DataTypes) => {
             },
             proposal_name: DataTypes.STRING,
             model_name: DataTypes.STRING,
+            proposal_manager: DataTypes.STRING,
+            contributors: DataTypes.ARRAY(DataTypes.STRING),
             api_key: DataTypes.STRING,
             proposal_type: DataTypes.STRING,
             category_type: DataTypes.ARRAY(DataTypes.STRING),
