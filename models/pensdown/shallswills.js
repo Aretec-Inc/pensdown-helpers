@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             shalls_wills_text: DataTypes.STRING,
             proposal_id: DataTypes.STRING,
+            section_id: DataTypes.STRING,
             created_by: DataTypes.STRING,
             is_deleted: {
                 type: DataTypes.BOOLEAN,
