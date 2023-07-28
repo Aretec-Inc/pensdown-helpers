@@ -27,7 +27,11 @@ module.exports = (sequelize, DataTypes) => {
             approved_by: DataTypes.STRING,
             created_at: {
                 type: DataTypes.DATE
-            }
+            },
+            is_deleted: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false
+            },
         },
         {
             sequelize,
