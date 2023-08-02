@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
             answer_text: DataTypes.STRING,
             reference_text: DataTypes.STRING,
             proposal_question_id: DataTypes.STRING,
+            contributors: DataTypes.ARRAY(DataTypes.STRING),
             is_deleted: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false
