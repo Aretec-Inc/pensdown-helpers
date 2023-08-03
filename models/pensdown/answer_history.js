@@ -20,9 +20,9 @@ module.exports = (sequelize, DataTypes) => {
                 primaryKey: true,
                 allowNull: false
             },
-            question_text: DataTypes.STRING(10000),
-            answer_text: DataTypes.STRING(10000),
-            reference_text: DataTypes.STRING(10000),
+            question_text: DataTypes.STRING(109654),
+            answer_text: DataTypes.STRING(109654),
+            reference_text: DataTypes.STRING(109654),
             proposal_question_id: DataTypes.STRING,
             contributors: DataTypes.ARRAY(DataTypes.STRING),
             is_deleted: {

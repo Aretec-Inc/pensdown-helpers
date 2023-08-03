@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             question_id: DataTypes.STRING,
             proposal_id: DataTypes.STRING,
-            question_text: DataTypes.STRING,
+            question_text: DataTypes.STRING(109765),
             section_id: DataTypes.STRING,
             approved_by: DataTypes.STRING,
             created_at: {

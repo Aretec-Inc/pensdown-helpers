@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
                 primaryKey: true,
                 allowNull: false
             },
-            shalls_wills_text: DataTypes.STRING,
+            shalls_wills_text: DataTypes.STRING(109765),
             proposal_id: DataTypes.STRING,
             section_id: DataTypes.STRING,
             created_by: DataTypes.STRING,
