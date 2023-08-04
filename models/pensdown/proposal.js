@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             contributors: DataTypes.ARRAY(DataTypes.STRING),
             file_url:DataTypes.STRING,
             api_key: DataTypes.STRING,
+            status: DataTypes.STRING,
             proposal_type: DataTypes.STRING,
             category_type: DataTypes.ARRAY(DataTypes.STRING),
             team_id: DataTypes.ARRAY(DataTypes.STRING),
