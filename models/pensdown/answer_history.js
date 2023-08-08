@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             question_text: DataTypes.STRING(109654),
-            answer_text: DataTypes.STRING(109654),
+            answer_text: DataTypes.JSONB,
             reference_text: DataTypes.STRING(109654),
             proposal_question_id: DataTypes.STRING,
             contributors: DataTypes.ARRAY(DataTypes.STRING),
