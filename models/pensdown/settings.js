@@ -1,0 +1,43 @@
+'use strict';
+const {
+    Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+    class Setting extends Model {
+        /**
+         * Helper method for defining associations.
+         * This method is not a part of Sequelize lifecycle.
+         * The `models/index` file will call this method automatically.
+         */
+        static associate(models) {
+            // define association here
+        }
+    }
+    Setting.init(
+        {
+            setting_id: {
+                type: DataTypes.STRING,
+                primaryKey: true,
+                allowNull: false
+            },
+            model: DataTypes.STRING(255),
+            startprompt: DataTypes.STRING(109654),
+            endprompt: DataTypes.STRING(109654),
+            api: DataTypes.STRING(1000),
+            is_deleted: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false
+            },
+            created_at: {
+                type: DataTypes.DATE
+            }
+        },
+        {
+            sequelize,
+            modelName: 'settings',
+            schema: 'pensdown',
+            createdAt: false,
+            updatedAt: false
+        });
+    return Setting;
+};
