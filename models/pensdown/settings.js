@@ -15,22 +15,17 @@ module.exports = (sequelize, DataTypes) => {
     }
     Setting.init(
         {
-            setting_id: {
+            proposal_id: {
                 type: DataTypes.STRING,
                 primaryKey: true,
                 allowNull: false
             },
             model: DataTypes.STRING(255),
-            startprompt: DataTypes.STRING(109654),
-            endprompt: DataTypes.STRING(109654),
-            api: DataTypes.STRING(1000),
-            is_deleted: {
-                type: DataTypes.BOOLEAN,
-                defaultValue: false
-            },
-            created_at: {
-                type: DataTypes.DATE
-            }
+            willshallprompt: DataTypes.STRING(109654),
+            questionprompt: DataTypes.STRING(109654),
+            answerprompt: DataTypes.STRING(109654),
+            agentprompt: DataTypes.STRING(109654),
+            api_key: DataTypes.STRING(1000),            
         },
         {
             sequelize,
