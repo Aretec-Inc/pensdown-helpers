@@ -25,7 +25,8 @@ module.exports = (sequelize, DataTypes) => {
             question_text: DataTypes.STRING(109765),
             section_id: DataTypes.STRING,
             approved_by: DataTypes.STRING,
-            question_status: DataTypes.STRING,
+            question_status: { type: DataTypes.STRING, defaultValue: 'unanswered' },
+            contributors: DataTypes.ARRAY(DataTypes.STRING),
             created_at: {
                 type: DataTypes.DATE
             },
