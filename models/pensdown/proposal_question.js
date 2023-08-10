@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             section_id: DataTypes.STRING,
             approved_by: DataTypes.STRING,
             question_status: DataTypes.STRING,
+            contributors: DataTypes.ARRAY(DataTypes.STRING),
             created_at: {
                 type: DataTypes.DATE
             },
