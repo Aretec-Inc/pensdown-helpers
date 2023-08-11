@@ -832,6 +832,7 @@ const validateFields = (input, project_id, rule_id) => {
 
 module.exports = {
     runQuery,
+    runQueryWithReplacements,
     parseVideoData,
     getVideoJSONKeys,
     getProjectDetails,
