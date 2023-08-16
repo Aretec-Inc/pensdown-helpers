@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             section_name: DataTypes.STRING,
+            parent_id: DataTypes.STRING,
+            created_at: {
+                type: DataTypes.DATE
+            }
         },
         {
             sequelize,
