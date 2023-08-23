@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
             },
             created_at: {
                 type: DataTypes.DATE
-            }
+            },
+            shalls_wills_no: DataTypes.STRING
         },
         {
             sequelize,
