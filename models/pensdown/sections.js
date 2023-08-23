@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             section_name: DataTypes.STRING,
             parent_id: DataTypes.STRING,
+            section_no: DataTypes.STRING,
             created_at: {
                 type: DataTypes.DATE
             },
