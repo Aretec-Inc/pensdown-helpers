@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             created_by: DataTypes.STRING,
             answer_id: DataTypes.STRING,
-            feedback_comment: DataTypes.STRING,
+            feedback_comment: DataTypes.ARRAY(DataTypes.STRING(1047658)),
             positive_negative: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false
