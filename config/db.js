@@ -17,14 +17,7 @@ const init = (cloudConfig = config, alter = false) => {
 
         console.log('Connection has been established successfully.')
 
-        let schema = 'pensdown'
-        let environment = process.env.environment
-        if(environment=='dev') {
-            schema += "_dev"
-        }else if(environment=='staging') {
-            schema += "_staging"
-        }
-
+    
         db.createSchema(schema)
             .then(() => console.log('****'))
             .catch((e) => console.log('error'))
