@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
 const exec = require('child_process').exec
 const addModels = require('../models')
-// const addDynamicModels = require('../dynamicModels')
+const addDynamicModels = require('../dynamicModels')
 const config = require('./config').development
 require('dotenv').config()
 
@@ -31,18 +31,18 @@ const init = (cloudConfig = config, alter = false) => {
 
         addModels(db)
 
-        // if (schema) {
-        //     console.log('schema')
-        //     try {
-        //         db.createSchema(schema)
-        //             .then(() => console.log('new schema'))
-        //             .catch((e) => console.log('error'))
+        if (schema) {
+            console.log('schema')
+            try {
+                db.createSchema(schema)
+                    .then(() => console.log('new schema'))
+                    .catch((e) => console.log('error'))
 
-        //         addDynamicModels(db, schema)
-        //     }
-        //     catch (e) {
-        //     }
-        // }
+                addDynamicModels(db, schema)
+            }
+            catch (e) {
+            }
+        }
 
         return db
     }
@@ -71,7 +71,7 @@ const initPromise = (cloudConfig = config, schema, alter = false) => {
                     console.log('new schema')
                 })
                 .catch((e) => console.log('error'))
-            // addDynamicModels(db, schema)
+            addDynamicModels(db, schema)
         }
         catch (e) {
             reject(null)
