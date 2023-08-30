@@ -18,7 +18,7 @@ const init = (cloudConfig = config, alter = false) => {
         console.log('Connection has been established successfully.')
 
     
-        db.createSchema(schema)
+        db.createSchema('pensdown')
             .then(() => console.log('****'))
             .catch((e) => console.log('error'))
 
