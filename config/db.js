@@ -3,6 +3,7 @@ const exec = require('child_process').exec
 const addModels = require('../models')
 // const addDynamicModels = require('../dynamicModels')
 const config = require('./config').development
+require('dotenv').config()
 
 const init = (cloudConfig = config, alter = false) => {
     try {
@@ -16,8 +17,15 @@ const init = (cloudConfig = config, alter = false) => {
 
         console.log('Connection has been established successfully.')
 
+        let schema = 'pensdown'
+        let environment = process.env.environment
+        if(environment=='dev') {
+            schema += "_dev"
+        }else if(environment=='staging') {
+            schema += "_staging"
+        }
 
-        db.createSchema('pensdown')
+        db.createSchema(schema)
             .then(() => console.log('****'))
             .catch((e) => console.log('error'))
 
