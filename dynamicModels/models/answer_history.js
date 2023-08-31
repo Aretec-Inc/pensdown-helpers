@@ -35,8 +35,8 @@ module.exports = (sequelize, DataTypes, schema) => {
         },
         {
             sequelize,
-            modelName: `${schema}_answer_history`,
-            tableName: 'answer_history',
+            modelName: `${schema}_answer_histories`,
+            tableName: 'answer_histories',
             schema,
             createdAt: false,
             updatedAt: false

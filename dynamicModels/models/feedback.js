@@ -37,8 +37,8 @@ module.exports = (sequelize, DataTypes, schema) => {
         },
         {
             sequelize,
-            modelName: `${schema}_feedback`,
-            tableName: 'feedback',
+            modelName: `${schema}_feedbacks`,
+            tableName: 'feedbacks',
             schema,
             createdAt: false,
             updatedAt: false

@@ -38,8 +38,8 @@ module.exports = (sequelize, DataTypes, schema) => {
         },
         {
             sequelize,
-            modelName: `${schema}_proposal_question`,
-            tableName: 'proposal_question',
+            modelName: `${schema}_proposal_questions`,
+            tableName: 'proposal_questions',
             schema,
             createdAt: false,
             updatedAt: false

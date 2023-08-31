@@ -44,8 +44,8 @@ module.exports = (sequelize, DataTypes, schema) => {
         },
         {
             sequelize,
-            modelName: `${schema}_proposal`,
-            tableName:'proposal',
+            modelName: `${schema}_proposals`,
+            tableName:'proposals',
             schema,
             createdAt: false,
             updatedAt: false
