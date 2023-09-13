@@ -15,14 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     }
     Feedback.init(
         {
-            feedback_id: {
+            answer_id: {
                 type: DataTypes.STRING,
                 primaryKey: true,
                 allowNull: false
             },
             created_by: DataTypes.STRING,
-            answer_id: DataTypes.STRING,
-            feedback_comment: DataTypes.ARRAY(DataTypes.STRING(1047658)),
+            feedback_comment: DataTypes.JSONB,
             positive_negative: {
                 type: DataTypes.BOOLEAN,
                 defaultValue: false
