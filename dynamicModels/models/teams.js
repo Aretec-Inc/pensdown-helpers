@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes, schema) => {
             },
             team_name: DataTypes.STRING,
             team_description: DataTypes.STRING,
+            order_by: DataTypes.INTEGER,
         },
         {
             sequelize,

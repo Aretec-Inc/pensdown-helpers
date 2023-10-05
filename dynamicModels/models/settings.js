@@ -26,6 +26,8 @@ module.exports = (sequelize, DataTypes, schema) => {
             answerprompt: DataTypes.STRING(109654),
             agentprompt: DataTypes.STRING(109654),
             api_key: DataTypes.STRING(1000),
+            usedisearch: DataTypes.STRING(10),
+            disearchserver: DataTypes.STRING(100)
         },
         {
             sequelize,
