@@ -24,12 +24,15 @@ module.exports = (sequelize, DataTypes, schema) => {
             model_name: DataTypes.STRING,
             proposal_manager: DataTypes.STRING,
             contributors: DataTypes.ARRAY(DataTypes.STRING),
-            file_url:DataTypes.STRING,
+            file_url: DataTypes.STRING,
             api_key: DataTypes.STRING,
             status: DataTypes.STRING,
             proposal_type: DataTypes.STRING,
             category_type: DataTypes.ARRAY(DataTypes.STRING),
             team_id: DataTypes.ARRAY(DataTypes.STRING),
+            section_c: DataTypes.STRING(100000),
+            section_m: DataTypes.STRING(100000),
+            section_l: DataTypes.STRING(100000),
             created_by: DataTypes.STRING,
             is_deleted: {
                 type: DataTypes.BOOLEAN,
@@ -45,7 +48,7 @@ module.exports = (sequelize, DataTypes, schema) => {
         {
             sequelize,
             modelName: `${schema}_proposals`,
-            tableName:'proposals',
+            tableName: 'proposals',
             schema,
             createdAt: false,
             updatedAt: false
