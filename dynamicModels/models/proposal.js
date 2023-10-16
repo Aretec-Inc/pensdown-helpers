@@ -30,9 +30,9 @@ module.exports = (sequelize, DataTypes, schema) => {
             proposal_type: DataTypes.STRING,
             category_type: DataTypes.ARRAY(DataTypes.STRING),
             team_id: DataTypes.ARRAY(DataTypes.STRING),
-            section_c: DataTypes.STRING(100000),
-            section_m: DataTypes.STRING(100000),
-            section_l: DataTypes.STRING(100000),
+            section_c: DataTypes.STRING(10485760),
+            section_m: DataTypes.STRING(10485760),
+            section_l: DataTypes.STRING(10485760),
             created_by: DataTypes.STRING,
             is_deleted: {
                 type: DataTypes.BOOLEAN,
