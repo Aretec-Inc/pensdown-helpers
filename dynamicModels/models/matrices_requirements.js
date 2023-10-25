@@ -2,7 +2,7 @@
 const {
     Model
 } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes, schema) => {
     class Matrices_requirements extends Model {
         /**
          * Helper method for defining associations.
@@ -35,8 +35,9 @@ module.exports = (sequelize, DataTypes) => {
     },
         {
             sequelize,
-            modelName: 'matrices_requirements',
-            schema: 'pensdown',
+            modelName: `${schema}_matrices_requirements`,
+            tableName: 'matrices_requirements',
+            schema,
             createdAt: false,
             updatedAt: false
         });
