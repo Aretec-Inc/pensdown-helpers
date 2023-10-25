@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         project_id: DataTypes.STRING,
+        section_value: DataTypes.STRING,
         requirement_value: DataTypes.STRING(100000),
         is_deleted: {
             type: DataTypes.BOOLEAN,
