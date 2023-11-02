@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes, schema) => {
         },
         user_id: DataTypes.STRING,
         file_id: DataTypes.STRING,
-        file_comment: DataTypes.JSONB,
+        comment: DataTypes.JSONB,
+        position: DataTypes.JSONB,
+        content: DataTypes.JSONB,
         is_deleted: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
